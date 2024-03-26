@@ -23,6 +23,7 @@ type ResponseInfo interface {
 
 type BaseResponseInfo struct {
 	Code    int    `json:"code" schema:"HTTP response code"`
+	Success bool   `json:"success"`
 	Status  string `json:"status"`
 	Message string `json:"message,omitempty" schema:"HTTP response message"`
 }
@@ -32,6 +33,11 @@ type BaseResponseInfo struct {
 // 设置回应code
 func (r *BaseResponseInfo) SetCode(code int) *BaseResponseInfo {
 	r.Code = code
+	if r.Code == Code_Successful {
+		r.Success = true
+	} else {
+		r.Success = false
+	}
 	return r
 }
 
