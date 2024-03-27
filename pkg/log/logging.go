@@ -3,6 +3,7 @@ package log
 import (
 	"fmt"
 	"io"
+	"log/slog"
 	"runtime"
 
 	"github.com/kataras/golog"
@@ -213,7 +214,9 @@ func Install(logger golog.ExternalLogger) {
 //
 // Look `golog#Handle` for more.
 func InstallStd(logger golog.StdLogger) {
-	golog.InstallStd(logger)
+	// myLogger := slog.New(slog.NewJSONHandler(os.Stdout, nil))
+	// golog.Install(myLogger) // OR just  golog.Install(slog.Default())
+	golog.Install(slog.Default())
 }
 
 // Handle adds a log handler to the default logger.
