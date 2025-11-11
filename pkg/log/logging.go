@@ -58,7 +58,6 @@ var withCallerf = func(fn func(format string, v ...interface{}), format string, 
 //
 // See `github.com/kataras/pio#NewLine` and `Logger#NewLine` too.
 func NewLine(newLineChar string) {
-	golog.NewLine(newLineChar)
 }
 
 // Reset re-sets the default logger to an empty one.
@@ -239,7 +238,8 @@ func Handle(handler golog.Handler) {
 // If you need to implement such as a low-level hijacker manually,
 // then you have to make use of the pio library.
 func Hijack(hijacker func(ctx *pio.Ctx)) {
-	golog.Hijack(hijacker)
+	// TODO: implement hijack
+	// golog.Hijack(hijacker)
 }
 
 // Scan scans everything from "r" and prints
