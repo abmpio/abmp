@@ -11,7 +11,6 @@ require (
 	github.com/kataras/pio v0.0.13
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/mitchellh/mapstructure v1.5.0
-	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/afero v1.11.0
 	github.com/spf13/viper v1.18.2
 	github.com/stretchr/testify v1.9.0
