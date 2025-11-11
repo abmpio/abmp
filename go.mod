@@ -5,8 +5,8 @@ go 1.25
 require (
 	github.com/deckarep/golang-set v1.8.0
 	github.com/go-playground/validator/v10 v10.28.0
-	github.com/kataras/golog v0.1.15
-	github.com/kataras/pio v0.0.14
+	github.com/kataras/golog v0.1.12
+	github.com/kataras/pio v0.0.13
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/mitchellh/mapstructure v1.5.0
 	github.com/spf13/afero v1.15.0
